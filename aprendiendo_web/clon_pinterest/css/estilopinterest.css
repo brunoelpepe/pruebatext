@@ -1,0 +1,194 @@
+:root{
+    font-size: 16px;
+    --column-width:14.75rem;
+    --row-increment: 0.5rem;
+    --card_border_radius: 1rem;
+    --pin_small: 26;
+    --pin_medium: 33;
+    --pin_large: 45;
+}
+*{
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.barra_navegacion{
+    position: fixed;
+    z-index: 100;
+    box-sizing: content-box;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 3.5rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left_nav, #right_nav {
+    display: flex;
+    align-items: center;
+}
+#left_nav a, #right_nav a{
+    text-decoration: none;
+    color: #111;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    margin: 0 0.1rem;
+}
+#left_nav .bottext:hover {
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+}
+
+#left_nav #ultimo_izq{
+    margin-right: 1rem;
+}
+.botones_imagen {
+    height: 3rem;
+}
+.botones_texto{
+    line-height: 2.8rem;
+}
+nav #center{
+    width: 50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+#center{
+    position: relative;
+}
+#center i{
+    position: absolute;
+    left: 15px;
+    top: 1.3rem;
+}
+
+#busqueda{
+    border-radius: 1.5rem;
+    width: 100%;
+    background-color: #e7e7e7;
+    border-style: none;
+    height: 3rem;
+    padding-left: 2.5rem;
+}
+
+
+#right_nav a{
+    text-decoration: none;
+    color: #111;
+    font-size: 1.5rem;
+    padding: 0 0.2rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    margin: 0 0.1rem;
+}
+#right_nav #primer_der{
+    margin-left: 1rem;
+}
+#container{
+    position: absolute;
+    top: 6rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, var(--column-width));
+    grid-auto-rows: 0.5rem;
+    justify-content: center; 
+}
+
+.pin{
+    position: relative;
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    background-color: blueviolet;
+    cursor: zoom-in;
+}
+
+.pin:hover{
+    background-color: #111;
+}
+
+.pin_small {
+    grid-row-end: span var(--pin_small);
+}
+#container #i1 {
+    background-image: url("/imgs/imagenes-logo-01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i2 {
+    background-image: url("/imgs/destacada-plankids-compressor.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i3 {
+    background-image: url("/imgs/flores01-compressor.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i4 {
+    background-image: url("/imgs/pankre-portada.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i5 {
+    background-image: url("/imgs/madremonte-01-compressor.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i6 {
+    background-image: url("/imgs/belsayd2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i7 {
+    background-image: url("/imgs/flores03-compressor.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i8 {
+    background-image: url("/imgs/imagenes-plankids04.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i9 {
+    background-image: url("/imgs/publicacion-v-tech05.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container #i10 {
+    background-image: url("/imgs/flores05-compressor.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.pin_medium{
+    grid-row-end: span var(--pin_medium);
+}
+.pin_medium img {
+    height: 100%;
+}
+.pin_large{
+    grid-row-end: span var(--pin_large);
+}
+.pin_large img{
+    height: 100px;
+}
+
+@media (max-width: 600px) {
+    body{
+        background-color: rgb(210, 228, 228);
+    }
+}
